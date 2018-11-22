@@ -1,0 +1,18 @@
+.btn {
+    background-color: #ffffff38;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 700;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 0px 2px 13px rgb(101, 101, 101);
+    text-transform: uppercase;
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+    transition: all .2s;
+    outline: none;
+    animation: pulsate 1s infinite;
+}

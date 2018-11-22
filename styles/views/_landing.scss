@@ -4,11 +4,122 @@
         grid-template-rows: 1fr;
         height: 100vh;
 
-        & .sunny {
-            background: orange;
+        .col {
+            
+            &__content {
+                display: grid;
+                grid-gap: 2rem;
+                justify-content: center;
+                align-content: center;
+                height: 100vh;
+
+                &--head {
+                    font-family: 'Pacifico', cursive;
+                    font-size: 6rem;
+                    text-shadow: 0px 2px 2px rgb(101, 101, 101);
+
+                    &-sunny {
+                        color: #ffe291;
+                    }
+
+                    &-winter {
+                        color: #f1f8ff;
+                    }
+                }    
+                
+                &--details {
+                    display: grid;
+                    grid-template-columns: 50rem;
+                    grid-template-rows: min-content repeat(2,  1fr);
+                    align-items: center;
+
+                    &-info {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-column-gap: 2rem;
+
+                        & .reviews {
+                            display: flex;
+                            align-items: center;
+                            
+                        }
+
+                        & .duration {
+                            display: flex;
+                            align-items: center;
+                        }
+    
+                        svg {
+                            width: 1.8rem;
+                            height: 1.8rem;
+                            margin-right: 0.6rem;
+                            fill: #ffe391;
+    
+                            &:last-of-type{
+                                margin-right: 1.7rem;
+                            }
+                        }
+    
+                        p {
+                            display: inline;
+                        }
+                    }
+
+                    
+                }
+            }
         }
 
-        & .cloudy {
-            background: greenyellow;
+        & .sunny {
+            position: relative;
+
+            &__price {
+                position: absolute;
+                top: 5rem;
+                left: 0;
+                background-color: #FF4A52;
+                padding: 1rem 2rem;
+
+                p {
+                    font-size: 1.5rem;
+                    color: white;
+                    font-weight: 500;
+                    word-spacing: 0.3rem;
+                    letter-spacing: 0.3rem;
+                    text-shadow: none;
+                    font-weight: 700;
+
+                    span:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            
+        }
+
+        & .winter {
+            position: relative;
+
+            &__price {
+                position: absolute;
+                top: 5rem;
+                left: 0;
+                background-color: #FF4A52;
+                padding: 1rem 2rem;
+
+                p {
+                    font-size: 1.5rem;
+                    color: white;
+                    font-weight: 500;
+                    word-spacing: 0.3rem;
+                    letter-spacing: 0.3rem;
+                    text-shadow: none;
+                    font-weight: 700;
+
+                    span:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                }
+            }   
         }
     }
