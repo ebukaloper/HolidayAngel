@@ -1,6 +1,3 @@
-// .container {
-//     display: grid;
-//     grid-template-columns: repeat(5,  1fr);
-//     grid-template-rows: 6rem repeat(3, 1fr);
-//     height: 90vh;
-// }
+body {
+    overflow: hidden !important;
+}
