@@ -15,6 +15,7 @@ html {
 body {
     background-color : #fff;
     box-sizing: border-box;
+    overflow-x: hidden !important;
 }
 
 ::selection {
