@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "node server.js",
-    "deploy": "yarn build; push-dir --dir=dist --branch=gh-pages --cleanup"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.16.4",
