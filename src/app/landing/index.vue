@@ -1,7 +1,6 @@
 <template>
     <section class="landing">
         <!-- <Nav /> -->
-        <!-- <modal-form /> -->
         <div class="sunny">
             <div class="col">
                 <div class="col__content">
@@ -32,7 +31,7 @@
 
                     </div>
                     <div class="col__content--cta">
-                        <button class="btn">Visit Bulgaria</button>
+                        <button @click="() => setModals(true)" class="btn">Visit Bulgaria</button>
                     </div>
                     <div class="col__content--images">
                         <vue-picture-swipe :items="items"></vue-picture-swipe>
@@ -76,7 +75,7 @@
 
                     </div>
                     <div class="col__content--cta">
-                        <button class="btn">Visit Germany</button>
+                        <button @click="() => setModals(true)" class="btn">Visit Germany</button>
                     </div>
                     <div class="col__content--images">
                         <vue-picture-swipe :items="items"></vue-picture-swipe>
@@ -90,12 +89,14 @@
                 </p>
             </div>
         </div>
+        <modal-form :getModals="getModals" :setModals="setModals" />
     </section>
 </template>
 
 <script>
 /* eslint-disable */
 
+  import { mapGetters, mapActions } from "vuex"
   import VuePictureSwipe from 'vue-picture-swipe';
   import Nav from '../../components/Nav.vue';
   import ModalForm from '../../components/ModalForm.vue'
@@ -135,7 +136,17 @@
           h: 900
         }
       ]};
-    }
+    },
+        computed: {
+		 ...mapGetters([
+            'getModals',
+        ]),
+    },
+    methods: {
+		...mapActions([
+            'setModals',
+        ]),
+    },
   }
 </script>
 
