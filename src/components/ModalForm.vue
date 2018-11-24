@@ -31,10 +31,10 @@
 
 <script>
 export default {
-	 props: {
+	props: {
         getModals: {
             type: Array,
-            default: []
+            default: () => {}
         },
         setModals: {
             type: Function,

@@ -9,10 +9,14 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@kevindesousa/vue-image-loader": "^2.0.1",
+    "axios": "^0.18.0",
     "express": "^4.16.4",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",
+    "unsplash-js": "^4.8.0",
     "vue": "^2.5.17",
+    "vue-loading-overlay": "^3.1.0",
     "vue-picture-swipe": "^0.4.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
@@ -25,6 +29,8 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "file-loader": "^2.0.0",
+    "image-webpack-loader": "^4.5.0",
     "push-dir": "^0.4.1",
     "style-resources-loader": "^1.2.1",
     "vue-cli-plugin-style-resources-loader": "^0.1.3",

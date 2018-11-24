@@ -9,7 +9,7 @@
                     </div>
                     <div class="col__content--details">
                         <div class="col__content--details-name">
-                            <h2>Bulgaria - Sunny beach coast</h2>
+                            <h2>Maldives - Sunny beach coast</h2>
                         </div>
                         <div class="col__content--details-description">
                             <h3>Known for its water sports, sand dunes and nightlife. Its waterfront is lined by a long sandy beach.</h3>
@@ -31,10 +31,10 @@
 
                     </div>
                     <div class="col__content--cta">
-                        <button @click="() => setModals(true)" class="btn">Visit Bulgaria</button>
+                        <button @click="() => setModals(true)" class="btn">Visit Maldives</button>
                     </div>
                     <div class="col__content--images">
-                        <vue-picture-swipe :items="items"></vue-picture-swipe>
+                        <vue-picture-swipe :getGallery="getSunnyGallery"></vue-picture-swipe>
                     </div>
                 </div>    
             </div>
@@ -78,7 +78,7 @@
                         <button @click="() => setModals(true)" class="btn">Visit Germany</button>
                     </div>
                     <div class="col__content--images">
-                        <vue-picture-swipe :items="items"></vue-picture-swipe>
+                        <vue-picture-swipe :getGallery="getWinterGallery"></vue-picture-swipe>
                     </div>
                 </div>    
             </div>
@@ -97,56 +97,35 @@
 /* eslint-disable */
 
   import { mapGetters, mapActions } from "vuex"
-  import VuePictureSwipe from 'vue-picture-swipe';
+  import HolidayAngelPictureSwipe from '../../components/HolidayAngelPictureSwipe.vue';
   import Nav from '../../components/Nav.vue';
   import ModalForm from '../../components/ModalForm.vue'
   
   export default {
     components: {
         Nav,
-        ModalForm
+        ModalForm,
+        HolidayAngelPictureSwipe
     },
-    data() {
-      return {
-        items: [
-        {
-          src: './img/annie-spratt-259356-unsplash.jpg',
-          thumbnail: './img/annie-spratt-259356-unsplash.jpg',
-          w: 600,
-          h: 400,
-          alt: 'some numbers on a grey background' // optional alt attribute for thumbnail image
-        },
-        {
-          src: './img/ostap-senyuk-203227-unsplash.jpg',
-          thumbnail: './img/ostap-senyuk-203227-unsplash.jpg',
-          w: 1200,
-          h: 900
-        },
-        {
-          src: './img/annie-spratt-259356-unsplash.jpg',
-          thumbnail: './img/annie-spratt-259356-unsplash.jpg',
-          w: 600,
-          h: 400,
-          alt: 'some numbers on a grey background' // optional alt attribute for thumbnail image
-        },
-        {
-          src: './img/ostap-senyuk-203227-unsplash.jpg',
-          thumbnail: './img/ostap-senyuk-203227-unsplash.jpg',
-          w: 1200,
-          h: 900
-        }
-      ]};
-    },
-        computed: {
+   
+    computed: {
 		 ...mapGetters([
             'getModals',
+            'getSunnyGallery',
+            'getWinterGallery'
         ]),
     },
     methods: {
 		...mapActions([
             'setModals',
+            'setSunnyGallery',
+            'setWinterGallery'
         ]),
     },
+    mounted(){
+        this.setSunnyGallery();
+        this.setWinterGallery();
+    }
   }
 </script>
 
@@ -154,15 +133,13 @@
   @import "../../../styles/global.scss";
 
     .sunny {
-        // background-image: linear-gradient(to right bottom, transparentize(#f6d365, 0.1), transparentize(#fda085, 0.2)),url(../../assets/img/annie-spratt-259356-unsplash.jpg);
-        background-image: linear-gradient(to right bottom, rgba(202, 173, 80, 0.9), rgba(197, 81, 47, 0.8)), url(../../assets/img/annie-spratt-259356-unsplash.jpg);
+        background-image: linear-gradient(to right bottom, rgba(202, 173, 80, 0.9), rgba(197, 81, 47, 0.8)), url(../../assets/img/sunny.jpeg);
         background-size: cover;
         background-position: top;
     }
 
     .winter {
-        // background-image: linear-gradient(to right bottom, transparentize(#a1c4fd, 0.2), transparentize(#c2e9fb, 0.2)),url(../../assets/img/ostap-senyuk-203227-unsplash.jpg);
-        background-image: linear-gradient(to right bottom, #1d478ce0, rgba(194, 233, 251, 0.91)), url(../../assets/img/ostap-senyuk-203227-unsplash.jpg);
+        background-image: linear-gradient(to right bottom, #1d478ce0, rgba(194, 233, 251, 0.91)), url(../../assets/img/winter.jpeg);
         background-size: cover;
         background-position: top;
     }
