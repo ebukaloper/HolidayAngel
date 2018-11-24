@@ -1,6 +1,5 @@
 <template>
     <section class="landing">
-        <!-- <Nav /> -->
         <div class="sunny">
             <div class="col">
                 <div class="col__content">
@@ -97,15 +96,11 @@
 /* eslint-disable */
 
   import { mapGetters, mapActions } from "vuex"
-  import HolidayAngelPictureSwipe from '../../components/HolidayAngelPictureSwipe.vue';
-  import Nav from '../../components/Nav.vue';
   import ModalForm from '../../components/ModalForm.vue'
   
   export default {
     components: {
-        Nav,
         ModalForm,
-        HolidayAngelPictureSwipe
     },
    
     computed: {
@@ -130,7 +125,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../../styles/global.scss";
+    @import "../../../styles/global.scss";
 
     .sunny {
         background-image: linear-gradient(to right bottom, rgba(202, 173, 80, 0.9), rgba(197, 81, 47, 0.8)), url(../../assets/img/sunny.jpeg);

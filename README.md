@@ -1,29 +1,19 @@
 # HolidayAngel
 
-## Project setup
-```
-yarn install
-```
+VueJS Landing Page for HolidayAngel, It's holiday season soon, and people are looking to book holidays. 
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## demo
+https://holidayangel.herokuapp.com/
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## built with 
+* vuejs ( vue-cli-3 )
+* vuex
+* scss
+* layout entirely in CSS Grid and flexbox
 
-### Run your tests
-```
-yarn run test
-```
+## hosted on 
+* heroku
 
-### Lints and fixes files
-```
-yarn run lint
-```
+## license 
+2018 - [_Ebukaloper_](http://github.com/ebukaloper)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
