@@ -19,7 +19,7 @@
           itemtype="http://schema.org/ImageObject"
           v-for="(item, index) in getGallery.slice(0, 4)" :src="item.urls.regular"
           v-bind:key="index">
-        <a :href="item.urls.regular" itemprop="contentUrl" :data-size="'' + 1500 + 'x' + 1500" title="Image">
+        <a :href="item.urls.regular" itemprop="contentUrl" :data-size="'' + 1500 + 'x' + 1500" :title="item.description">
           <img :src="item.urls.thumb" itemprop="thumbnail"/>
         </a>
       </figure>
