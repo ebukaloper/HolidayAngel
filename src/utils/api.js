@@ -1,4 +1,7 @@
 // API Service for Unsplash
+
+/* eslint-disable */
+
 import axios from 'axios'
 
 const ACCESS_KEY = 'a47b92e8221fbe40c8528db0abe208114d92aa42e51ccaa9f91932490a70a874'
