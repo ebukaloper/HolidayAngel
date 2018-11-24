@@ -1,3 +1,5 @@
+// To enable Heroku serve our dist folder
+
 const express = require('express');
 const port = process.env.PORT || 8080;
 const app = express();
